@@ -1,8 +1,8 @@
 const form = document.querySelector('form');
-const userName = document.getElementById('user__name')
+const userName = document.getElementById('username')
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const confirmPassword = document.getElementById('confirm__password');
+const confirmPassword = document.getElementById('confirm-password');
 
 
 // Show input error message
@@ -71,7 +71,8 @@ function checkPasswordMatch (input1, input2){
 
 // get fieldName
 function getFieldName(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+    const fieldName = input.id.replace(/-/g, ' ');
+    return fieldName.charAt(0).toUpperCase() + fieldName.slice(1);
 };
 
 // eventListener
